@@ -1,8 +1,8 @@
 import './App.scss';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Comments from './components/Comments';
-import Videos from './components/Videos';
+import CommentsView from './components/CommentsView';
+import VideosView from './components/VideosView';
 
 
 
@@ -13,8 +13,8 @@ function App() {
       <Header />
       <Hero />
       <div className='page-content'>
-        <Comments />
-        <Videos />
+        <CommentsView />
+        <VideosView />
       </div>
     </div>
   );

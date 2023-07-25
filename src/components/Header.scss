@@ -26,6 +26,22 @@
     color: $primaryColorWhite;
     border-radius: 0.25rem;
     border-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 2rem;
+
+    picture {
+      background: url('../assets/images/upload.svg');
+      padding: 0;
+      background-size: cover;
+      border-radius: 50%;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      margin-right: 0.5rem;
+    }
 
     &:hover {
       background-color: $secondaryColorDarkBlue;
@@ -41,6 +57,16 @@
   &__left{
     display: flex;
     align-items: center;
+  }
+
+  &__input {
+    background-image: url('../assets/images/search.svg');
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    padding: 0.75rem 2.5rem;
+    border-radius: .25rem;
+    border: 1px $secondaryColorDarkMercury solid;
+    color: $primaryColorBlack
   }
 }
 

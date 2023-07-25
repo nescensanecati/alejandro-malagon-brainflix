@@ -1,0 +1,65 @@
+@import "../styles/partials/variables";
+@import "../styles/partials/fonts";
+
+.highlights {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  &__bottom-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: .1.5625rem solid $secondaryColorDarkMercury;
+    padding-bottom: 0.5rem;
+  }
+  &__bottom-left {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+  }
+  &__bottom-right {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 3rem;
+  }
+  &__tittle {
+    padding-bottom: 1rem;
+    font-weight: bold;
+  }
+  &__text {
+    padding-top: 1rem;
+    padding-right: 2rem;
+  }
+  &__author, &__date, &__views, &__loves {
+    padding-right: 1rem;
+    align-self: center;
+  }
+
+  &__views, &__loves {
+    display: flex;
+    flex-direction: row;
+  }
+
+
+
+  &__eye {
+    background: url('../assets/images/views.svg');
+    background-size: contain;
+    align-self: center;
+    background-repeat: no-repeat;
+    height: 1.5625rem;
+    margin: 0 0.5rem;
+    width: 1.5625rem;
+  }
+  &__heart {
+    background: url('../assets/images/likes.svg');
+    background-size: contain;
+    align-self: center;
+    background-repeat: no-repeat;
+    height: 1.5625rem;
+    margin: 0 0.5rem;
+    width: 1.5625rem;
+  }
+}

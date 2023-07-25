@@ -1,0 +1,57 @@
+@import "../styles/partials/variables";
+@import "../styles/partials/fonts";
+
+.new-comments {
+  border-top: 0.0625rem solid $secondaryColorDarkMercury;
+  display: flex;
+  padding: 1rem 0;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__logo {
+    display: block;
+    padding: 0;
+    background-color: $secondaryColorDarkMercury;
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 1rem;
+  }
+
+  &__left {
+    display: block;
+  }
+
+  &__right {
+    display: flex;
+  }
+  &__card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0 3rem 0 0;
+    margin-left: 1rem;
+  }
+
+  &__tittle {
+    text-align: left;
+    color: $primaryColorBlack;
+    // font-size: 0.75rem;
+  }
+
+  &__date {
+    text-align: right;
+    color: $primaryColorSilver;
+    font-weight: $regularWeight;
+  }
+
+  &__text {
+    line-height: 1;
+    color: $primaryColorBlack;
+  }
+}

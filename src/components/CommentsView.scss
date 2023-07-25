@@ -1,0 +1,8 @@
+@import "../styles/partials/variables";
+@import "../styles/partials/fonts";
+
+.comments-view {
+  padding: 2rem 0rem 2rem 3rem;
+  width: 60%;
+  border-right: .0625rem solid $secondaryColorDarkMercury;
+}

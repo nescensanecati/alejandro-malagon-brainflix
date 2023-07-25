@@ -1,5 +1,38 @@
 /*  ----------------------- VIDEOS --------------------------- */
 .videos {
+  * {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
   }
-  
-  //end videos
+
+  &__description {
+    padding: 0 1rem;
+  }
+
+  &__card-1 {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+  }
+  &__image-1 {
+    background: url("https://i.imgur.com/5qyCZrD.jpg");
+    background-size: cover;
+    width: 6.25rem;
+    height: 3.75rem;
+    border-radius: 0.25rem;
+  }
+
+  &__card-2 {
+    display: flex;
+    flex-direction: row;
+    padding: 0.5rem 0;
+  }
+  &__image-2 {
+    background: url("https://i.imgur.com/yFS8EBr.jpg");
+    background-size: cover;
+    width: 6.25rem;
+    height: 3.75rem;
+    border-radius: 0.25rem;
+  }
+}

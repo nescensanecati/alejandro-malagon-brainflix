@@ -1,53 +1,74 @@
 @import "../styles/partials/variables";
-
 @import "../styles/partials/fonts";
 
-#comments__form {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  width: 100%;
-
-  div {
+.comments {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  &__count {
+    padding: 1rem 0;
+  }
+  &__tittle {
+    margin: 0 1rem;
+  }
+  &__div {
     display: flex;
     flex-direction: row;
     justify-content: left;
     width: 100%;
+    padding: 0 3rem 0 0;
+  }
+  &__icon {
+    background: url("../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 1rem;
+  }
+  &__bottom {
+    display: flex;
+    align-self: center;
+  }
+  &_button {
+    background-color: $primaryColorBlue;
+    color: $primaryColorWhite;
+    border-radius: 0.25rem;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
 
-    & article {
-      * {
-        display: block;
-      }
+    picture {
+      background: url('../assets/images/add_comment.svg');
+      padding: 0;
+      background-size: cover;
+      border-radius: 50%;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      margin-right: 0.5rem;
+    }
 
-      * input {
-        width: 100%;
-      }
-
-      & .comments__icon {
-        background: url("../assets/images/Mohan-muruge.jpg");
-        background-size: cover;
-        border-radius: 50%;
-        width: 2.25rem;
-        height: 2.25rem;
-      }
+    &:hover {
+      background-color: $secondaryColorDarkBlue;
     }
   }
-}
-.comments__inputs {
-  width: 100%;
 
-  textarea {
+  &__inputs {
     width: 100%;
-    height: 30%;
-    border: 0.0625rem $secondaryColorDarkMercury solid;
-    resize: none;
+    align-self: center;
   }
 
-  input,
-  textarea {
+  &__textarea {
+    background-color: $secondaryColorDarkAlabaster;
     border-radius: 0.25rem;
     border: 0.0625rem $secondaryColorDarkMercury solid;
-    background-color: $secondaryColorDarkAlabaster;
+    margin: 0 1rem;
+    resize: none;
+    width: 70%;
 
     &:focus {
       border: 0.0625rem $secondaryColorDarkBlack solid;
@@ -58,64 +79,11 @@
       border: 0.0625rem red solid !important;
     }
   }
-
-  label {
-    color: $primaryColorSilver;
-    font-size: 0.625rem;
-  }
-
-  button {
-    background-color: $primaryColorBlue;
-    color: $primaryColorWhite;
-    border-radius: 0.25rem;
-    border-style: none;
-
-    &:hover {
-      background-color: $secondaryColorDarkBlue;
-    }
-  }
 }
-
-#new-comments {
-  .new-comments__logo {
-    background-color: $secondaryColorDarkMercury;
-    background-size: cover;
-    border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
-  }
-
-  article {
-    display: flex;
-    border-top: 0.0625rem solid $secondaryColorDarkMercury;
-
-    div {
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      width: 100%;
-
-      h3 {
-        width: 50%;
-        text-align: left;
-        color: $primaryColorBlack;
-        font-size: 0.75rem;
-      }
-
-      h4 {
-        width: 50%;
-        text-align: right;
-        color: $primaryColorSilver;
-        font-weight: $regularWeight;
-        font-size: 0.625rem;
-      }
-
-      p {
-        width: 100%;
-        line-height: 1;
-        color: $primaryColorBlack;
-        font-size: 0.85rem;
-      }
-    }
-  }
+#comments__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 1rem 0;
 }
