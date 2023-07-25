@@ -1,0 +1,47 @@
+@import "../styles/partials/variables";
+
+@import "../styles/partials/fonts";
+
+/*  ----------------------- HEADER --------------------------- */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+
+  &__a {
+    text-decoration: none;
+  }
+
+  &__avatar {
+    background: url("../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &__button {
+    background-color: $primaryColorBlue;
+    color: $primaryColorWhite;
+    border-radius: 0.25rem;
+    border-style: none;
+
+    &:hover {
+      background-color: $secondaryColorDarkBlue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__left{
+    display: flex;
+    align-items: center;
+  }
+}
+
+//end header

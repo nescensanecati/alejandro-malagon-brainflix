@@ -1,0 +1,19 @@
+@import "./styles/partials/variables";
+
+@import "./styles/partials/fonts";
+
+
+.page-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2rem 6rem;
+}
+.comments {
+    width: 65%;
+    padding-right: 1rem;
+  }
+.videos {
+    width: 35%;
+    padding-left: 1rem;
+  }

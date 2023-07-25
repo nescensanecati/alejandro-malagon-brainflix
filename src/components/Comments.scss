@@ -1,0 +1,121 @@
+@import "../styles/partials/variables";
+
+@import "../styles/partials/fonts";
+
+#comments__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+
+    & article {
+      * {
+        display: block;
+      }
+
+      * input {
+        width: 100%;
+      }
+
+      & .comments__icon {
+        background: url("../assets/images/Mohan-muruge.jpg");
+        background-size: cover;
+        border-radius: 50%;
+        width: 2.25rem;
+        height: 2.25rem;
+      }
+    }
+  }
+}
+.comments__inputs {
+  width: 100%;
+
+  textarea {
+    width: 100%;
+    height: 30%;
+    border: 0.0625rem $secondaryColorDarkMercury solid;
+    resize: none;
+  }
+
+  input,
+  textarea {
+    border-radius: 0.25rem;
+    border: 0.0625rem $secondaryColorDarkMercury solid;
+    background-color: $secondaryColorDarkAlabaster;
+
+    &:focus {
+      border: 0.0625rem $secondaryColorDarkBlack solid;
+      outline: none !important;
+    }
+
+    &:invalid {
+      border: 0.0625rem red solid !important;
+    }
+  }
+
+  label {
+    color: $primaryColorSilver;
+    font-size: 0.625rem;
+  }
+
+  button {
+    background-color: $primaryColorBlue;
+    color: $primaryColorWhite;
+    border-radius: 0.25rem;
+    border-style: none;
+
+    &:hover {
+      background-color: $secondaryColorDarkBlue;
+    }
+  }
+}
+
+#new-comments {
+  .new-comments__logo {
+    background-color: $secondaryColorDarkMercury;
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  article {
+    display: flex;
+    border-top: 0.0625rem solid $secondaryColorDarkMercury;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+
+      h3 {
+        width: 50%;
+        text-align: left;
+        color: $primaryColorBlack;
+        font-size: 0.75rem;
+      }
+
+      h4 {
+        width: 50%;
+        text-align: right;
+        color: $primaryColorSilver;
+        font-weight: $regularWeight;
+        font-size: 0.625rem;
+      }
+
+      p {
+        width: 100%;
+        line-height: 1;
+        color: $primaryColorBlack;
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
