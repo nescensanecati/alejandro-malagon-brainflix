@@ -18,6 +18,7 @@ function Comments() {
                                     id="comments__textarea"
                                     placeholder="Add a new comment"
                                     className='comments__textarea'
+                                    rows="1"
                                     required
                                 ></textarea>
                                 <button className='comments_button' type="submit"><picture></picture>COMMENT</button>
