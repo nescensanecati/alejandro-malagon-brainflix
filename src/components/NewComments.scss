@@ -2,7 +2,7 @@
 @import "../styles/partials/fonts";
 
 .new-comments {
-  border-top: 0.0625rem solid $secondaryColorDarkMercury;
+  border-bottom: 0.0625rem solid $secondaryColorDarkMercury;
   display: flex;
   padding: 1rem 0;
 
@@ -53,5 +53,30 @@
   &__text {
     line-height: 1;
     color: $primaryColorBlack;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+}
+
+@media only screen and (max-width: 767px) {
+  .new-comments{
+    &__card {
+      padding: 0;
+    }
+    &__logo {
+      margin: 0.25rem;
+    }
+    &__tittle {
+      font-size:medium;
+      padding: 0.5rem 0;
+    }
+    &__date {
+      font-size:medium;
+      padding: 0.5rem 0;
+    }
+    &__text {
+      font-size: small;
+    }
   }
 }

@@ -3,6 +3,30 @@
 
 .comments-view {
   padding: 2rem 0rem 2rem 3rem;
-  width: 60%;
-  border-right: .0625rem solid $secondaryColorDarkMercury;
+  border-right: 0.0625rem solid $secondaryColorDarkMercury;
 }
+
+
+@media only screen and (max-width: 1279px) {
+  .comments-view {
+    padding: 2rem;
+    border-right:none;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comments-view {
+    padding: 0;
+    border-right: none;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .comments-view {
+    padding: 2rem;
+    width: 60%;
+    border-right:none;
+  }
+}
+
+

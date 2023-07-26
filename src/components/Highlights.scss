@@ -10,7 +10,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: .1.5625rem solid $secondaryColorDarkMercury;
+    border-bottom: 1px solid $secondaryColorDarkMercury;
     padding-bottom: 0.5rem;
   }
   &__bottom-left {
@@ -32,20 +32,21 @@
     padding-top: 1rem;
     padding-right: 3rem;
   }
-  &__author, &__date, &__views, &__loves {
+  &__author,
+  &__date,
+  &__views,
+  &__loves {
     padding-right: 1rem;
     align-self: center;
   }
-
-  &__views, &__loves {
+  &__views,
+  &__loves {
     display: flex;
     flex-direction: row;
   }
 
-
-
   &__eye {
-    background: url('../assets/images/views.svg');
+    background: url("../assets/images/views.svg");
     background-size: contain;
     align-self: center;
     background-repeat: no-repeat;
@@ -54,12 +55,91 @@
     width: 1.5625rem;
   }
   &__heart {
-    background: url('../assets/images/likes.svg');
+    background: url("../assets/images/likes.svg");
     background-size: contain;
     align-self: center;
     background-repeat: no-repeat;
     height: 1.5625rem;
     margin: 0 0.5rem;
     width: 1.5625rem;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  .highlights {
+    * {
+      padding: 0;
+      margin: 0;
+      font-size: small;
+    }
+    h2 {
+      font-size: xx-large;
+    }
+    &__author,
+    &__date,
+    &__views,
+    &__loves {
+      padding: 0.5rem 1rem 0.5rem 0;
+      align-self: center;
+      font-size: small;
+    }
+    &__heart, &__eye {
+      align-items: center;
+      margin: 0 .5rem;
+      padding: 0 .05rem;
+    }
+    &__text {
+      padding: 1rem 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .highlights {
+    * {
+      padding: 0;
+      margin: 0;
+      font-size: small;
+    }
+    &__tittle{
+      padding: 1rem 0;
+      font-size: x-large;
+    }
+    &__bottom-field {
+      flex-direction: row;
+      border-top: .0625rem solid $secondaryColorDarkMercury;
+      padding: 0.5rem 0;
+    }
+    &__bottom-left {
+      flex-direction: column;
+      justify-content: left;
+    }
+    &__bottom-right {
+      flex-direction: column;
+    }
+    &__author,&__date {
+      width: 100%;
+      text-align: left;
+      padding: 0.5rem 0 0 0;
+    }
+    &__date {
+      margin-top: 0.4rem;
+    }
+    &__views,
+    &__loves {
+      width: 100%;
+      justify-content: right;
+      padding: 0.5rem 1rem 0 0;
+    }
+
+    &__eye,
+    &__heart {
+      height: .625rem;
+      margin: 0.25rem 0.25rem 0.5rem 0;
+      width: .625rem;
+    }
+    &__text {
+      padding: 0.5rem 0;
+    }
   }
 }

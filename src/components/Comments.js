@@ -21,7 +21,7 @@ function Comments() {
                                     rows="1"
                                     required
                                 ></textarea>
-                                <button className='comments_button' type="submit"><picture></picture>COMMENT</button>
+                                <button className='comments__button' type="submit"><picture></picture>COMMENT</button>
                             </div>
                         </article>
                     </div>
