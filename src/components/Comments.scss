@@ -1,0 +1,144 @@
+@import "../styles/partials/variables";
+@import "../styles/partials/fonts";
+
+.comments {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  &__count {
+    padding: 1rem 0;
+  }
+  &__tittle {
+    margin: 0 1rem;
+  }
+  &__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    width: 100%;
+    padding: 0 3rem 0 0;
+  }
+  &__icon {
+    background: url("../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    margin: 1rem;
+  }
+  &__bottom {
+    display: flex;
+    align-self: center;
+    margin: 0.5rem 0;
+    justify-content: space-between;
+  }
+  &__button {
+    background-color: $primaryColorBlue;
+    color: $primaryColorWhite;
+    border-radius: 0.25rem;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+
+    picture {
+      background: url("../assets/images/add_comment.svg");
+      padding: 0;
+      background-size: cover;
+      border-radius: 50%;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      background-color: $secondaryColorDarkBlue;
+    }
+  }
+
+  &__inputs {
+    width: 100%;
+    align-self: center;
+  }
+
+  &__textarea {
+    background-color: $secondaryColorDarkAlabaster;
+    border-radius: 0.25rem;
+    border: 0.0625rem $secondaryColorDarkMercury solid;
+    margin: 0 1.5rem 0 1rem;
+    resize: none;
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5rem 1.5rem;
+    font-family: $defaultFont;
+
+    &:focus {
+      border: 0.0625rem $secondaryColorDarkBlack solid;
+      outline: none !important;
+    }
+
+    &:invalid {
+      border: 0.0625rem red solid !important;
+    }
+  }
+}
+#comments__form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  padding: 1rem 0;
+  border-bottom: 0.0625rem solid $secondaryColorDarkMercury;
+}
+
+@media only screen and (max-width: 1279px) {
+  .comments {
+    &__icon {
+      margin: 0.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .comments {
+    &__div {
+      padding: 0;
+    }
+    &__icon {
+      margin: 0.25rem;
+    }
+    &__bottom{
+      flex-direction: column;
+      margin: 0;
+    }
+    &__inputs {
+      padding: 0 0.5rem;
+    }
+    &__tittle {
+      padding: 0;
+      margin: 0;
+    }
+    &__textarea{
+      width: 92%;
+      height: 5rem;
+      margin: 0.5rem 0;
+      font-size: medium;
+      padding: 0.5rem;
+    }
+    &__button {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  #comments__form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-bottom: 1 solid $secondaryColorDarkMercury;
+  }  
+}

@@ -1,0 +1,116 @@
+@import "../styles/partials/variables";
+
+@import "../styles/partials/fonts";
+
+/*  ----------------------- HEADER --------------------------- */
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 6rem;
+
+  &__a {
+    text-decoration: none;
+  }
+
+  &__avatar {
+    background: url("../assets/images/Mohan-muruge.jpg");
+    background-size: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  &__button {
+    background-color: $primaryColorBlue;
+    color: $primaryColorWhite;
+    border-radius: 0.25rem;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    margin: 0 2rem;
+
+    picture {
+      background: url("../assets/images/upload.svg");
+      padding: 0;
+      background-size: cover;
+      border-radius: 50%;
+      width: 1.5625rem;
+      height: 1.5625rem;
+      margin-right: 0.5rem;
+    }
+
+    &:hover {
+      background-color: $secondaryColorDarkBlue;
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__input {
+    background-image: url("../assets/images/search.svg");
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    padding: 0.75rem 2.5rem;
+    border-radius: 0.25rem;
+    border: 1px $secondaryColorDarkMercury solid;
+    color: $primaryColorBlack;
+  }
+}
+
+//end header
+
+@media only screen and (max-width: 1279px) {
+  .header {
+    padding: 1rem 2rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 0;
+
+    &__left {
+      justify-content: center;
+    }
+    &__right {
+      flex-direction: column;
+      padding: 0 1rem;
+    }
+    #header__search-form {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+    }
+    &__input,
+    &__avatar,
+    &__logo,
+    &__button {
+      margin: 0.5rem 0;
+    }
+    &__button {
+      width: 100%;
+      justify-content: center;
+    }
+    &__input {
+      padding: 0.75rem 3.0rem
+    }
+  }
+}

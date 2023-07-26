@@ -1,0 +1,19 @@
+.videos-view {
+  padding: 2rem 3rem 2rem 2rem;
+  width: 40%;
+}
+
+
+@media only screen and (max-width: 1279px) {
+  .videos-view {
+    padding: 2rem;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .videos-view {
+    padding: 0;
+    width: 100%;
+  }
+}
