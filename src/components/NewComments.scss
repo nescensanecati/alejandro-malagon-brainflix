@@ -2,13 +2,20 @@
 @import "../styles/partials/fonts";
 
 .new-comments {
-  border-bottom: 0.0625rem solid $secondaryColorDarkMercury;
   display: flex;
+  flex-direction: column;
   padding: 1rem 0;
 
   * {
     margin: 0;
     padding: 0;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 0.0625rem solid $secondaryColorDarkMercury;
+    padding: 0rem 0 1rem 0;
   }
 
   &__logo {
@@ -28,26 +35,28 @@
 
   &__right {
     display: flex;
+    flex-direction: column;
   }
   &__card {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 3rem 0 0;
+    padding: .5rem 3rem .5rem 0;
     margin-left: 1rem;
   }
 
   &__tittle {
     text-align: left;
     color: $primaryColorBlack;
-    // font-size: 0.75rem;
+    padding: .5rem 0;
   }
 
   &__date {
     text-align: right;
     color: $primaryColorSilver;
     font-weight: $regularWeight;
+    padding: .5rem 0;
   }
 
   &__text {
