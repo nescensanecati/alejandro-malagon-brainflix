@@ -1,11 +1,14 @@
 import './Comments.scss'
+import VideoDisplayedId from './VideoDisplayedId'
+
+let tempCommentsCount = VideoDisplayedId.comments.length
 
 function Comments() {
     return (
         <>
 
             <section className='comments'>
-                <h3 className='comments__count'>3 comments</h3>
+                <h3 className='comments__count'>{tempCommentsCount} comments</h3>
                 <form id="comments__form">
                     <div className='comments__div'>
                         <article>

@@ -42,21 +42,21 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding: .5rem 3rem .5rem 0;
+    padding: 0.5rem 3rem 0.5rem 0;
     margin-left: 1rem;
   }
 
   &__tittle {
     text-align: left;
     color: $primaryColorBlack;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 
   &__date {
     text-align: right;
     color: $primaryColorSilver;
     font-weight: $regularWeight;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
   }
 
   &__text {
@@ -69,7 +69,7 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .new-comments{
+  .new-comments {
     &__card {
       padding: 0;
     }
@@ -77,11 +77,11 @@
       margin: 0.25rem;
     }
     &__tittle {
-      font-size:medium;
+      font-size: medium;
       padding: 0.5rem 0;
     }
     &__date {
-      font-size:medium;
+      font-size: medium;
       padding: 0.5rem 0;
     }
     &__text {

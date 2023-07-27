@@ -83,10 +83,11 @@
       align-self: center;
       font-size: small;
     }
-    &__heart, &__eye {
+    &__heart,
+    &__eye {
       align-items: center;
-      margin: 0 .5rem;
-      padding: 0 .05rem;
+      margin: 0 0.5rem;
+      padding: 0 0.05rem;
     }
     &__text {
       padding: 1rem 0;
@@ -101,13 +102,13 @@
       margin: 0;
       font-size: small;
     }
-    &__tittle{
+    &__tittle {
       padding: 1rem 0;
       font-size: x-large;
     }
     &__bottom-field {
       flex-direction: row;
-      border-top: .0625rem solid $secondaryColorDarkMercury;
+      border-top: 0.0625rem solid $secondaryColorDarkMercury;
       padding: 0.5rem 0;
     }
     &__bottom-left {
@@ -117,7 +118,8 @@
     &__bottom-right {
       flex-direction: column;
     }
-    &__author,&__date {
+    &__author,
+    &__date {
       width: 100%;
       text-align: left;
       padding: 0.5rem 0 0 0;
@@ -134,9 +136,9 @@
 
     &__eye,
     &__heart {
-      height: .625rem;
+      height: 0.625rem;
       margin: 0.25rem 0.25rem 0.5rem 0;
-      width: .625rem;
+      width: 0.625rem;
     }
     &__text {
       padding: 0.5rem 0;

@@ -4,8 +4,8 @@ import './VideosView.scss'
 function VideosView() {
     return (
         <>
-        <section className='videos-view'>
-            <Videos />
+            <section className='videos-view'>
+                <Videos />
             </section>
         </>
     )

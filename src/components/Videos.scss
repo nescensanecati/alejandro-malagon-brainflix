@@ -2,7 +2,6 @@
 @import "../styles/partials/variables";
 @import "../styles/partials/fonts";
 
-
 .videos {
   * {
     margin: 0;
@@ -29,8 +28,9 @@
     border-radius: 0.25rem;
   }
 
-  &__author, &__title {
-    padding: .5rem 0;
+  &__author,
+  &__title {
+    padding: 0.5rem 0;
   }
 }
 
@@ -41,12 +41,13 @@
   .videos {
     h2 {
       font-size: larger;
-      font-weight:normal;
+      font-weight: normal;
       padding: 0.5rem 0;
     }
     padding: 1rem 0;
-    &__tittle, &__author {
-      font-size:x-small;
+    &__tittle,
+    &__author {
+      font-size: x-small;
       padding: 0.25rem 0;
     }
   }

@@ -6,10 +6,10 @@ import NewComments from './NewComments'
 function CommentsView() {
     return (
         <>
-        <section className='comments-view'>
-            <Highlights />
-            <Comments />
-            <NewComments />
+            <section className='comments-view'>
+                <Highlights />
+                <Comments />
+                <NewComments />
             </section>
         </>
     )

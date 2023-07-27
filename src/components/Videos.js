@@ -10,15 +10,15 @@ function Videos() {
                 {VideosDetail.map((tempVideo) => {
                     if (tempVideo.id !== VideoDisplayedId.id) {
                         return (
-                        <>
-                            <div className='videos__card'>
-                                <img alt='' src={tempVideo.image} className='videos__image'></img>
-                                <article className='videos__description'>
-                                    <h3 className='videos__tittle'>{tempVideo.title}</h3>
-                                    <p className='videos__author'>{tempVideo.channel}</p>
-                                </article>
-                            </div>
-                        </>)
+                            <>
+                                <div className='videos__card'>
+                                    <img alt='' src={tempVideo.image} className='videos__image'></img>
+                                    <article className='videos__description'>
+                                        <h3 className='videos__tittle'>{tempVideo.title}</h3>
+                                        <p className='videos__author'>{tempVideo.channel}</p>
+                                    </article>
+                                </div>
+                            </>)
                     }
                 })}
             </section>

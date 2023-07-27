@@ -110,7 +110,7 @@
     &__icon {
       margin: 0.25rem;
     }
-    &__bottom{
+    &__bottom {
       flex-direction: column;
       margin: 0;
     }
@@ -121,7 +121,7 @@
       padding: 0;
       margin: 0;
     }
-    &__textarea{
+    &__textarea {
       width: 92%;
       height: 5rem;
       margin: 0.5rem 0;
@@ -140,5 +140,5 @@
     flex-wrap: nowrap;
     width: 100%;
     border-bottom: 1 solid $secondaryColorDarkMercury;
-  }  
+  }
 }
