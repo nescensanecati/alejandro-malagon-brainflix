@@ -5,8 +5,6 @@ import CommentsView from './components/CommentsView';
 import VideosView from './components/VideosView';
 
 
-
-
 function App() {
   return (
     <div className="App">

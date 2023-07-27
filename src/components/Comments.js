@@ -1,4 +1,5 @@
 import './Comments.scss'
+
 function Comments() {
     return (
         <>
