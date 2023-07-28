@@ -110,7 +110,9 @@
       justify-content: center;
     }
     &__input {
-      padding: 0.75rem 3rem;
+      padding: 0.75rem 0rem 0.75rem 3rem;
+      width: 70%;
+      margin-right: 1rem;
     }
   }
 }

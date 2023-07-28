@@ -74,18 +74,23 @@
       padding: 0;
     }
     &__logo {
-      margin: 0.25rem;
+      margin: .5rem 0.25rem 0.25rem 0.25rem;
     }
     &__tittle {
-      font-size: medium;
-      padding: 0.5rem 0;
+      font-size: small;
+      margin: 0.5rem 0;
+      padding: 0;
+      width: 50%;
     }
     &__date {
-      font-size: medium;
-      padding: 0.5rem 0;
+      font-size: smaller;
+      margin: .5rem 0;
+      padding: 0;
+      width: 50%;
     }
     &__text {
       font-size: small;
+      padding-bottom: 1rem;
     }
   }
 }
