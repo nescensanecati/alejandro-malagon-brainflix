@@ -15,7 +15,7 @@
     display: flex;
     flex-direction: row;
     border-bottom: 0.0625rem solid $secondaryColorDarkMercury;
-    padding: 0rem 0 1rem 0;
+    padding: 1rem 0 1rem 0;
   }
 
   &__logo {
@@ -46,7 +46,7 @@
     margin-left: 1rem;
   }
 
-  &__tittle {
+  &__title {
     text-align: left;
     color: $primaryColorBlack;
     padding: 0.5rem 0;
@@ -76,7 +76,7 @@
     &__logo {
       margin: .5rem 0.25rem 0.25rem 0.25rem;
     }
-    &__tittle {
+    &__title {
       font-size: small;
       margin: 0.5rem 0;
       padding: 0;

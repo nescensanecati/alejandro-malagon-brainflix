@@ -11,7 +11,7 @@ function CommentsInput({selectedVideo, videosDetails}) {
                             <div className="comments__icon"></div>
                         </article>
                         <article className="comments__inputs">
-                            <p className='comments__tittle'>JOIN THE CONVERSATION</p>
+                            <p className='comments__title'>JOIN THE CONVERSATION</p>
                             <div className='comments__bottom'>
                                 <textarea
                                     name="commentInput"
