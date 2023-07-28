@@ -1,6 +1,6 @@
-@import "../styles/partials/variables";
+@import "../../Styles/Partials/variables";
 
-@import "../styles/partials/fonts";
+@import "../../Styles/Partials/fonts";
 
 /*  ----------------------- HEADER --------------------------- */
 .header {
@@ -14,7 +14,7 @@
   }
 
   &__avatar {
-    background: url("../assets/images/Mohan-muruge.jpg");
+    background: url("../../Assets/Images/Mohan-muruge.jpg");
     background-size: cover;
     border-radius: 50%;
     width: 2.25rem;
@@ -34,7 +34,7 @@
     margin: 0 2rem;
 
     picture {
-      background: url("../assets/images/upload.svg");
+      background: url("../../Assets/Images/upload.svg");
       padding: 0;
       background-size: cover;
       border-radius: 50%;
@@ -60,7 +60,7 @@
   }
 
   &__input {
-    background-image: url("../assets/images/search.svg");
+    background-image: url("../../Assets/Images/search.svg");
     background-repeat: no-repeat;
     background-position: left 1rem center;
     padding: 0.75rem 2.5rem;

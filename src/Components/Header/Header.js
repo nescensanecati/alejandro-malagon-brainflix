@@ -1,6 +1,6 @@
 import './Header.scss'
 import { useMediaQuery } from 'react-responsive'
-import logo from '../assets/images/BrainFlix-logo.svg'
+import logo from '../../Assets/Images/BrainFlix-logo.svg'
 
 
 function Header() {

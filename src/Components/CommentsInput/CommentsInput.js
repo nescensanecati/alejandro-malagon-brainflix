@@ -1,14 +1,10 @@
-import './Comments.scss'
-import VideoDisplayedId from './VideoDisplayedId'
+import './CommentsInput.scss'
 
-let tempCommentsCount = VideoDisplayedId.comments.length
-
-function Comments() {
+function CommentsInput({selectedVideo, videosDetails}) {
     return (
         <>
-
             <section className='comments'>
-                <h3 className='comments__count'>{tempCommentsCount} comments</h3>
+                <h3 className='comments__count'>{selectedVideo.comments.length} comments</h3>
                 <form id="comments__form">
                     <div className='comments__div'>
                         <article>
@@ -35,4 +31,4 @@ function Comments() {
     )
 }
 
-export default Comments
+export default CommentsInput
