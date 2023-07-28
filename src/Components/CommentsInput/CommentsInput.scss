@@ -1,5 +1,5 @@
-@import "../styles/partials/variables";
-@import "../styles/partials/fonts";
+@import "../../Styles/Partials/variables";
+@import "../../Styles/Partials/fonts";
 
 .comments {
   * {
@@ -20,7 +20,7 @@
     padding: 0 3rem 0 0;
   }
   &__icon {
-    background: url("../assets/images/Mohan-muruge.jpg");
+    background: url("../../Assets/Images/Mohan-muruge.jpg");
     background-size: cover;
     border-radius: 50%;
     width: 2.25rem;
@@ -45,7 +45,7 @@
     font-weight: bold;
 
     picture {
-      background: url("../assets/images/add_comment.svg");
+      background: url("../../Assets/Images/add_comment.svg");
       padding: 0;
       background-size: cover;
       border-radius: 50%;

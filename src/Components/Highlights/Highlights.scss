@@ -1,5 +1,5 @@
-@import "../styles/partials/variables";
-@import "../styles/partials/fonts";
+@import "../../Styles/Partials/variables";
+@import "../../Styles/Partials/fonts";
 
 .highlights {
   * {
@@ -46,7 +46,7 @@
   }
 
   &__eye {
-    background: url("../assets/images/views.svg");
+    background: url("../../Assets/Images/views.svg");
     background-size: contain;
     align-self: center;
     background-repeat: no-repeat;
@@ -55,7 +55,7 @@
     width: 1.5625rem;
   }
   &__heart {
-    background: url("../assets/images/likes.svg");
+    background: url("../../Assets/Images/likes.svg");
     background-size: contain;
     align-self: center;
     background-repeat: no-repeat;
