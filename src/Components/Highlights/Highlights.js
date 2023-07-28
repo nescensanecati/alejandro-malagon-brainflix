@@ -18,6 +18,7 @@ function Highlights({selectedVideo, videosDetails}) {
                 </article>
                 <p className='highlights__text'>{selectedVideo.description}</p>
             </section>
+            <h3 className='comments__count'>{selectedVideo.comments.length} comments</h3>
         </>
     )
 }

@@ -8,7 +8,7 @@ function Comments({selectedVideo, videosDetails}) {
         <>
             <section className='comments-view'>
             <Highlights selectedVideo={selectedVideo} videosDetails={videosDetails}/>
-            <CommentsInput selectedVideo={selectedVideo} videosDetails={videosDetails}/>
+            <CommentsInput/>
             <CommentsList selectedVideoComments={selectedVideo.comments}/>
             </section>
         </>

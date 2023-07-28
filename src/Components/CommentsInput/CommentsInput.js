@@ -1,10 +1,9 @@
 import './CommentsInput.scss'
 
-function CommentsInput({selectedVideo, videosDetails}) {
+function CommentsInput() {
     return (
         <>
             <section className='comments'>
-                <h3 className='comments__count'>{selectedVideo.comments.length} comments</h3>
                 <form id="comments__form">
                     <div className='comments__div'>
                         <article>
