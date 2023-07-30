@@ -49,7 +49,7 @@ function CommentsList({ selectedVideoComments }) {
                                 </article>
                                 <article className='new-comments__right'>
                                     <div className='new-comments__card'>
-                                        <h3 className='new-comments__tittle'>{comment.name}</h3>
+                                        <h3 className='new-comments__title'>{comment.name}</h3>
                                         <h4 className='new-comments__date'>{timeDifference(Date.now(), comment.timestamp)}</h4>
                                         <p className='new-comments__text'>{comment.comment}</p>
                                     </div>

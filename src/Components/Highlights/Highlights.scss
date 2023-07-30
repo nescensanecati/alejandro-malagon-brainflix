@@ -24,7 +24,7 @@
     flex-direction: row-reverse;
     padding-right: 3rem;
   }
-  &__tittle {
+  &__title {
     padding-bottom: 1rem;
     font-weight: bold;
   }
@@ -39,10 +39,14 @@
     padding-right: 1rem;
     align-self: center;
   }
+  &__date {
+    color: $primaryColorSilver;
+  }
   &__views,
   &__loves {
     display: flex;
     flex-direction: row;
+    color: $primaryColorSilver;
   }
 
   &__eye {
@@ -102,7 +106,7 @@
       margin: 0;
       font-size: small;
     }
-    &__tittle {
+    &__title {
       padding: 1rem 0;
       font-size: x-large;
     }

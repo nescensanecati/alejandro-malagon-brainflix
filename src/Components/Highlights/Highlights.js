@@ -5,7 +5,7 @@ function Highlights({selectedVideo, videosDetails}) {
     return (
         <>
             <section className='highlights'>
-                <h2 className='highlights__tittle'>{selectedVideo.title}</h2>
+                <h2 className='highlights__title'>{selectedVideo.title}</h2>
                 <article className='highlights__bottom-field'>
                     <div className='highlights__bottom-left'>
                         <h3 className='highlights__author'>By {selectedVideo.channel}</h3>
@@ -18,6 +18,7 @@ function Highlights({selectedVideo, videosDetails}) {
                 </article>
                 <p className='highlights__text'>{selectedVideo.description}</p>
             </section>
+            <h3 className='comments__count'>{selectedVideo.comments.length} comments</h3>
         </>
     )
 }
