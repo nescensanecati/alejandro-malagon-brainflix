@@ -1,11 +1,12 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./Pages/HomePage";
+import UploadPage from "./Pages/UploadPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 import './App.scss';
-import { useState } from 'react';
-import CommentsView from './Components/CommentsView/CommentsView'
-import Header from './Components/Header/Header'
-import Hero from './Components/Hero/Hero';
 import videosDetails from './Data/video-details.json'
 import videosList from './Data/videos.json'
-import VideosView from './Components/VideosView/VideosView';
+import { useState } from "react";
+import Header from './Components/Header/Header'
 
 
 function App() {
@@ -25,16 +26,14 @@ function App() {
 
 
   return (
-    <div className="App">
-      <div className="App">
-        <Header />
-        <Hero selectedVideo={selectedVideo} />
-        <div className='page-content'>
-          <CommentsView selectedVideo={selectedVideo} videosDetails={videosDetails}/>
-          <VideosView selectedVideo={selectedVideo} handleSelectVideo={handleSelectVideo} filteredVideos={filteredVideos}/>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} filteredVideos={filteredVideos}/>} />
+        <Route path="upload" element={<UploadPage/>} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

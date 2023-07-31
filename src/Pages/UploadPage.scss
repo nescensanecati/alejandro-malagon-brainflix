@@ -1,0 +1,120 @@
+@import "../Styles/Partials/variables";
+
+@import "../Styles/Partials/fonts";
+
+.upload {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__img {
+    width: 100%;
+    border-radius: 0.25rem;
+    margin: 0.5rem 0;
+  }
+
+  &__cancel {
+    background-color: white;
+    color: $primaryColorBlue;
+    border-radius: 0.25rem;
+    border-style: none;
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: bold;
+    justify-content: center;
+  }
+  &__description {
+    background-color: $secondaryColorDarkAlabaster;
+    border-radius: 0.25rem;
+    border: 0.0625rem $secondaryColorDarkMercury solid;
+    resize: none;
+    font-family: $defaultFont;
+    padding: 0.5rem;
+
+    &:focus {
+      border: 0.0625rem $secondaryColorDarkBlack solid;
+      outline: none !important;
+    }
+
+    &:invalid {
+      border: 0.0625rem red solid !important;
+    }
+  }
+  &__h1 {
+    margin: 1rem 0;
+  }
+  &__h2 {
+    margin: 0.5rem 0;
+    font-size: small;
+    color: $primaryColorSilver;
+  }
+  &__send {
+    align-items: center;
+    background-color: $primaryColorBlue;
+    border-radius: 0.25rem;
+    border-style: none;
+    color: $primaryColorWhite;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    font-weight: bold;
+    margin: 2rem 0 0.5rem 0;
+    padding: 0.5rem 1rem;
+  }
+  &__publish-img {
+    margin-right: 30%;
+  }
+  &__title {
+    background-color: $secondaryColorDarkAlabaster;
+    border-radius: 0.25rem;
+    border: 0.0625rem $secondaryColorDarkMercury solid;
+    resize: none;
+    font-family: $defaultFont;
+    padding: 0.5rem;
+
+    &:focus {
+      border: 0.0625rem $secondaryColorDarkBlack solid;
+      outline: none !important;
+    }
+
+    &:invalid {
+      border: 0.0625rem red solid !important;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .upload {
+    padding: 0 3rem;
+
+    &__bottom {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+
+    &__cancel,
+    &__send {
+      margin: 2rem 0;
+      padding: .5rem 4rem 0.5rem .5rem;
+    }
+    &__send{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .upload {
+    padding: 0 6rem;
+  }
+}

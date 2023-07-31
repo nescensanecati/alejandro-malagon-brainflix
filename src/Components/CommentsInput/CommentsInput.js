@@ -1,4 +1,5 @@
 import './CommentsInput.scss'
+import addComment from '../../Assets/Images/add_comment.svg'
 
 function CommentsInput() {
     return (
@@ -20,7 +21,7 @@ function CommentsInput() {
                                     rows="1"
                                     required
                                 ></textarea>
-                                <button className='comments__button' type="submit"><picture></picture>COMMENT</button>
+                                <button className='comments__button' type="submit"><img className='comments__button-img' src={addComment} alt=''></img>COMMENT</button>
                             </div>
                         </article>
                     </div>
