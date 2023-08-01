@@ -8,8 +8,12 @@ function UploadPage() {
         <>
             <section className='upload'>
                 <h1 className='upload__h1'>Upload Video</h1>
+                <div className='upload__content'>
+                <article className='upload__section'>
                 <h2 className='upload__h2'>VIDEO THUMBNAIL</h2>
                 <img className='upload__img' src={uploadImg} alt=''></img>
+                </article>
+                <article className='upload__section'>
                 <h2 className='upload__h2'>TITLE YOUR VIDEO</h2>
                 <textarea
                     className='upload__title'
@@ -25,6 +29,8 @@ function UploadPage() {
                     placeholder='Add a description to your video'
                     required
                     rows='5'></textarea>
+                </article>
+                </div>
                 <div className='upload__bottom'>
                 <button className='upload__send' type='upload'><img src={publishIcon} alt='' className='upload__publish-img'></img>PUBLISH</button>
                 <button className='upload__cancel' type='cancel'>CANCEL</button>

@@ -49,7 +49,7 @@
   &__h2 {
     margin: 0.5rem 0;
     font-size: small;
-    color: $primaryColorSilver;
+    color: $secondaryColorDarkMercury;
   }
   &__send {
     align-items: center;
@@ -89,9 +89,16 @@
     display: flex;
     flex-direction: column;
   }
+  &__title, &__description {
+    width: 94%;
+  }
 }
 
 @media only screen and (min-width: 768px) {
+  .header {
+    border-bottom: 1px solid $secondaryColorDarkMercury;
+  }
+
   .upload {
     padding: 0 3rem;
 
@@ -110,11 +117,55 @@
         flex-direction: row;
         justify-content: flex-start;
     }
+    &__content {
+      border-bottom: 1px solid $secondaryColorDarkMercury;
+      border-top: 1px solid $secondaryColorDarkMercury;
+    }
+    &__img {
+      width: 50%;
+    }
+    &__title, &__description {
+      width: 97%;
+    }
+    &__content {
+      padding: 1rem 0 2rem 0;
+    }
   }
 }
 
 @media only screen and (min-width: 1280px) {
+  .header {
+    border-bottom: 1px solid $secondaryColorDarkMercury;
+  }
   .upload {
     padding: 0 6rem;
+
+    &__h1 {
+      font-size: xx-large;
+      padding: 1rem 0;
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: row;
+      padding: 2rem 0;
+      border-bottom: 1px solid $secondaryColorDarkMercury;
+      border-top: 1px solid $secondaryColorDarkMercury;
+    }
+  
+    &__section{
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      &:first-child {
+        margin-right: 3rem;
+      }
+    }
+    &__img {
+      width: 100%;
+    }
+    &__title, &__description {
+      width: 96%;
+    }
   }
 }

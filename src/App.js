@@ -1,16 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import HomePage from "./Pages/HomePage";
-import UploadPage from "./Pages/UploadPage";
-import NotFoundPage from "./Pages/NotFoundPage";
 import './App.scss';
-import videosDetails from './Data/video-details.json'
-import videosList from './Data/videos.json'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from './Components/Header/Header'
-
+import HomePage from "./Pages/HomePage";
+import NotFoundPage from "./Pages/NotFoundPage";
+import UploadPage from "./Pages/UploadPage";
+import VideoPage from "./Pages/VideoPage";
+import videosDetails from './Data/video-details.json'
+import videosArray from './Data/videos.json'
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videosDetails[0])
+
 
   function handleSelectVideo(videoId) {
     const foundVideo = videosDetails.find((video) => {
@@ -19,18 +20,13 @@ function App() {
     setSelectedVideo(foundVideo);
   }
 
-  const filteredVideos = videosList.filter((video) => {
-    return video.id !== selectedVideo.id;
-  })
-
-
-
   return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} filteredVideos={filteredVideos}/>} />
-        <Route path="upload" element={<UploadPage/>} />
+        <Route path="/" element={<HomePage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/video/:videoId" element={<VideoPage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

@@ -1,7 +1,15 @@
+@import "../../Styles/Partials/variables";
+
+@import "../../Styles/Partials/fonts";
+
 /*  ----------------------- HERO --------------------------- */
 .hero {
+  background-color: $secondaryColorDarkBlack;
+  display: flex;
+  justify-content: center;
   &__video {
-    width: 100%;
+    max-height: 31.25rem;
+    max-width: 100%;
   }
 }
 
