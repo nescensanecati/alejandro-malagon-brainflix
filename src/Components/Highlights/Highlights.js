@@ -1,6 +1,6 @@
 import './Highlights.scss'
 
-function Highlights({selectedVideo, videosDetails}) {
+function Highlights({selectedVideo}) {
     let tempHighlightsDate = new Date(selectedVideo.timestamp).toLocaleDateString();
     return (
         <>
