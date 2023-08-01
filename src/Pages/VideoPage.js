@@ -1,7 +1,7 @@
 import { useParams, Navigate } from "react-router-dom";
 import HomePage from "./HomePage";
 
-function VideoPage({selectedVideo, videosDetails, handleSelectVideo, videosArray}) {
+function VideoPage({videosDetails, videosArray}) {
     const { videoId } = useParams();
     const video = videosDetails.find((video) => video.id === videoId);
     if (!video) {
@@ -10,7 +10,7 @@ function VideoPage({selectedVideo, videosDetails, handleSelectVideo, videosArray
     if (video.id === videoId) {
         return (
             <>
-                <HomePage selectedVideo={video} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>
+                <HomePage selectedVideo={video} videosDetails={videosDetails} videosArray={videosArray}/>
             </>
         );
     }
