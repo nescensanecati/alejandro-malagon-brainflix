@@ -1,15 +1,17 @@
 import './App.scss';
-import { useState } from 'react';
-import CommentsView from './Components/CommentsView/CommentsView'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import Header from './Components/Header/Header'
-import Hero from './Components/Hero/Hero';
+import HomePage from "./Pages/HomePage";
+import NotFoundPage from "./Pages/NotFoundPage";
+import UploadPage from "./Pages/UploadPage";
+import VideoPage from "./Pages/VideoPage";
 import videosDetails from './Data/video-details.json'
-import videosList from './Data/videos.json'
-import VideosView from './Components/VideosView/VideosView';
-
+import videosArray from './Data/videos.json'
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videosDetails[0])
+
 
   function handleSelectVideo(videoId) {
     const foundVideo = videosDetails.find((video) => {
@@ -18,23 +20,16 @@ function App() {
     setSelectedVideo(foundVideo);
   }
 
-  const filteredVideos = videosList.filter((video) => {
-    return video.id !== selectedVideo.id;
-  })
-
-
-
   return (
-    <div className="App">
-      <div className="App">
-        <Header />
-        <Hero selectedVideo={selectedVideo} />
-        <div className='page-content'>
-          <CommentsView selectedVideo={selectedVideo} videosDetails={videosDetails}/>
-          <VideosView selectedVideo={selectedVideo} handleSelectVideo={handleSelectVideo} filteredVideos={filteredVideos}/>
-        </div>
-      </div>
-    </div>
+    <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path="/" element={<HomePage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>} />
+        <Route path="/upload" element={<UploadPage />} />
+        <Route path="/video/:videoId" element={<VideoPage selectedVideo={selectedVideo} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

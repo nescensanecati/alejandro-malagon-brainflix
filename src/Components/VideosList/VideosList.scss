@@ -9,6 +9,18 @@
     padding: 0;
     line-height: 1;
   }
+  &__link {
+    text-decoration: none;
+    color: $primaryColorBlack;
+    width: 100%;
+    border-radius: 0.25rem;
+  }
+  &__link-img {
+    text-decoration: none;
+    color: $primaryColorBlack;
+    width: 7rem;
+    border-radius: 0.25rem;
+  }
 
   &__description {
     padding: 0 1rem;
