@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Avenir-Font";
+  font-weight: 400;
+  src: url("../../Assets/Fonts/AvenirNextLTPro.ttf") format("opentype"),
+    url("../../Assets/Fonts/AvenirNextLTPro.ttf")
+      format("truetype");
+}
+
+@font-face {
+  font-family: "Avenir-Font";
+  font-weight: 700;
+  src: url("../../Assets/Fonts/AvenirNextLTPro-Bold.otf") format("opentype"),
+    url("../../Assets/Fonts/AvenirNextLTProBold.ttf")
+      format("truetype");
+}
+
+$defaultFont: "Avenir-Font";
+$regularWeight: 400;
+$boldWeight: 700;
