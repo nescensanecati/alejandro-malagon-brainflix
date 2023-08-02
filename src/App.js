@@ -10,13 +10,13 @@ import VideoPage from "./Pages/VideoPage";
 
 function App() {
   const [videosArray, setVideosArray] = useState('');
-  
+
   function handleVideosArray(videos) {
     setVideosArray(videos);
   }
 
   const [selectedVideoId, setSelectedVideoId] = useState('84e96018-4022-434e-80bf-000ce4cd12b8');
-  
+
   function handleVideoId(videoId) {
     setSelectedVideoId(videoId);
   }
@@ -65,18 +65,23 @@ function App() {
 
 
 
-  if (typeof(selectedVideoDetails) == 'object' && typeof(videosArray) == 'object') {
+  if (typeof (selectedVideoDetails) == 'object' && typeof (videosArray) == 'object') {
     return (
-    <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} />} />
-        <Route path="/upload" element={<UploadPage />} />
-        <Route path="/video/:videoId" element={<VideoPage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} handleVideoId={handleVideoId}/>} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </BrowserRouter>
-  );}
+      <div className="App">
+        <div className="App">
+          <BrowserRouter>
+            <Header />
+            <Routes>
+              <Route path="/" element={<HomePage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} handleVideoId={handleVideoId} />} />
+              <Route path="/upload" element={<UploadPage />} />
+              <Route path="/video/:videoId" element={<VideoPage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} handleVideoId={handleVideoId} />} />
+              <Route path="*" element={<NotFoundPage />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;

@@ -1,5 +1,9 @@
 import { useParams, Navigate } from "react-router-dom";
-import HomePage from "./HomePage";
+import CommentsView from '../Components/CommentsView/CommentsView'
+import VideosView from '../Components/VideosView/VideosView'
+import Hero from '../Components/Hero/Hero'
+
+
 
 function VideoPage({ selectedVideoDetails, handleVideoId, videosArray }) {
     const { videoId } = useParams();
@@ -11,8 +15,12 @@ function VideoPage({ selectedVideoDetails, handleVideoId, videosArray }) {
     if (video.id === videoId) {
         return (
             <>
-                <HomePage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} />
-            </>
+                    <Hero selectedVideoDetails={selectedVideoDetails} />
+                    <div className='page-content'>
+                        <CommentsView selectedVideoDetails={selectedVideoDetails} />
+                        <VideosView selectedVideoDetails={selectedVideoDetails} videosArray={videosArray}/>
+                    </div>
+        </>
         );
     }
 
