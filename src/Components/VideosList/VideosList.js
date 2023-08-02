@@ -1,12 +1,12 @@
 import './VideosList.scss'
 import VideoCard from '../VideoCard/VideoCard'
 
-function VideosList({selectedVideo, videosArray}) {
+function VideosList({selectedVideoDetails, videosArray}) {
     return (
         <>
             <section className='videos'>
                 <h2>NEXT VIDEOS</h2>
-                <VideoCard selectedVideo={selectedVideo} videosArray={videosArray}/>
+                <VideoCard selectedVideo={selectedVideoDetails} videosArray={videosArray}/>
             </section>
         </>
     )
