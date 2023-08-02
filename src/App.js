@@ -8,45 +8,50 @@ import NotFoundPage from "./Pages/NotFoundPage";
 import UploadPage from "./Pages/UploadPage";
 import VideoPage from "./Pages/VideoPage";
 
-import tempVideosDetails from './Data/video-details.json'
-import tempVideosArray from './Data/videos.json'
-
 function App() {
-  const [videosArray, setVideosArray] = useState(tempVideosArray);
-
+  const [videosArray, setVideosArray] = useState('');
+  
   function handleVideosArray(videos) {
     setVideosArray(videos);
   }
+
+  const [selectedVideoDetails, setSelectedVideoDetails] = useState();
+
+  function handleSelectedVideoDetails(video) {
+    setSelectedVideoDetails(video)
+  }
+
 
   useEffect(() => {
     axios.get('https://project-2-api.herokuapp.com/videos?api_key=054cc34c-ac41-4ee1-8a1a-40f9b03cd86b')
       .then(response => {
         handleVideosArray(response.data);
-      })
+        axios.get
+          (`https://project-2-api.herokuapp.com/videos/${response.data[0].id}?api_key=054cc34c-ac41-4ee1-8a1a-40f9b03cd86b`)
+          .then
+          (
+            response => {
+              handleSelectedVideoDetails(response.data);
+            }
+          )
+      }
+      )
       .catch(error => console.log('Axios error: ', error))
   }, [])
 
-  const [videosDetails, setVideosDetails] = useState(tempVideosDetails);
 
-  function handleVideosDetails(video) {
-    setVideosDetails(video);
-  }
-
-  const [selectedVideo, setSelectedVideo] = useState(videosDetails[0])
-
-  
-
-  return (
+  if (typeof(selectedVideoDetails) == 'object' && typeof(videosArray) == 'object') {
+    return (
     <BrowserRouter>
       <Header />
       <Routes>
-        <Route path="/" element={<HomePage selectedVideo={selectedVideo} videosDetails={videosDetails} videosArray={videosArray} />} />
+        <Route path="/" element={<HomePage selectedVideoDetails={selectedVideoDetails} videosArray={videosArray} />} />
         <Route path="/upload" element={<UploadPage />} />
-        <Route path="/video/:videoId" element={<VideoPage videosDetails={videosDetails} videosArray={videosArray} />} />
+        {/* <Route path="/video/:videoId" element={<VideoPage videosArray={videosArray} />} /> */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
-  );
+  );}
 }
 
 export default App;

@@ -1,11 +1,11 @@
 import './VideosView.scss'
 import VideosList from '../VideosList/VideosList'
 
-function VideosView({selectedVideo, videosArray}) {
+function VideosView({selectedVideoDetails, videosArray}) {
     return (
         <>
             <section className='videos-view'>
-                <VideosList selectedVideo={selectedVideo} videosArray={videosArray}/>
+                <VideosList selectedVideoDetails={selectedVideoDetails} videosArray={videosArray}/>
             </section>
         </>
     )

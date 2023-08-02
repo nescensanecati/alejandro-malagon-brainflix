@@ -2,15 +2,16 @@ import CommentsView from '../Components/CommentsView/CommentsView'
 import Hero from '../Components/Hero/Hero';
 import VideosView from '../Components/VideosView/VideosView';
 
-function HomePage({selectedVideo, videosDetails, videosArray}) {
+function HomePage({selectedVideoDetails, videosArray}) {
+    
     return (
         <>
             <div className="App">
                 <div className="App">
-                    <Hero selectedVideo={selectedVideo} />
+                    <Hero selectedVideoDetails={selectedVideoDetails} />
                     <div className='page-content'>
-                        <CommentsView selectedVideo={selectedVideo} videosDetails={videosDetails} />
-                        <VideosView selectedVideo={selectedVideo} videosArray={videosArray}/>
+                        <CommentsView selectedVideoDetails={selectedVideoDetails} />
+                        <VideosView selectedVideoDetails={selectedVideoDetails} videosArray={videosArray}/>
                     </div>
                 </div>
             </div>
