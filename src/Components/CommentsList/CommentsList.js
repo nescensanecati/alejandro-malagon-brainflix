@@ -1,6 +1,6 @@
 import './CommentsList.scss'
 
-function CommentsList({ selectedVideoComments }) {
+function CommentsList({ selectedVideoDetailsComments }) {
     
     function timeDifference(current, previous) {
 
@@ -40,7 +40,7 @@ function CommentsList({ selectedVideoComments }) {
     return (
         <div>
             <section className="new-comments">
-                {selectedVideoComments.map((comment) => {
+                {selectedVideoDetailsComments.map((comment) => {
                     return (
                         <div key={comment.id} >
                             <div className='new-comments__row'>

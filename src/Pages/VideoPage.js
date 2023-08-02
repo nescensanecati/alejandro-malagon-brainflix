@@ -1,20 +1,29 @@
 import { useParams, Navigate } from "react-router-dom";
-import HomePage from "./HomePage";
+import CommentsView from '../Components/CommentsView/CommentsView'
+import VideosView from '../Components/VideosView/VideosView'
+import Hero from '../Components/Hero/Hero'
 
-function VideoPage({selectedVideo, videosDetails, handleSelectVideo, videosArray}) {
+
+
+function VideoPage({ selectedVideoDetails, handleVideoId, videosArray }) {
     const { videoId } = useParams();
-    const video = videosDetails.find((video) => video.id === videoId);
+    const video = videosArray.find((video) => video.id === videoId);
+    handleVideoId(videoId)
     if (!video) {
         return <Navigate to={`/`} />;
     }
     if (video.id === videoId) {
         return (
             <>
-                <HomePage selectedVideo={video} videosDetails={videosDetails} handleSelectVideo={handleSelectVideo} videosArray={videosArray}/>
-            </>
+                    <Hero selectedVideoDetails={selectedVideoDetails} />
+                    <div className='page-content'>
+                        <CommentsView selectedVideoDetails={selectedVideoDetails} />
+                        <VideosView selectedVideoDetails={selectedVideoDetails} videosArray={videosArray}/>
+                    </div>
+        </>
         );
     }
-    
+
 }
 
 export default VideoPage;

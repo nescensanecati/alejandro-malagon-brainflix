@@ -3,13 +3,13 @@ import CommentsInput from '../CommentsInput/CommentsInput.js'
 import CommentsList from '../CommentsList/CommentsList'
 import Highlights from '../Highlights/Highlights'
 
-function Comments({selectedVideo, videosDetails}) {
+function Comments({selectedVideoDetails}) {
     return (
         <>
             <section className='comments-view'>
-            <Highlights selectedVideo={selectedVideo} videosDetails={videosDetails}/>
+            <Highlights selectedVideoDetails={selectedVideoDetails}/>
             <CommentsInput/>
-            <CommentsList selectedVideoComments={selectedVideo.comments}/>
+            <CommentsList selectedVideoDetailsComments={selectedVideoDetails.comments}/>
             </section>
         </>
     )

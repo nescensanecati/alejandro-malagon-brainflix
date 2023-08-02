@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function VideoCard({ selectedVideo, handleSelectVideo, videosArray}) {
+function VideoCard({ selectedVideo, videosArray}) {
     const filteredVideos = videosArray.filter((video) => {
         return video.id !== selectedVideo.id;})
     return (
