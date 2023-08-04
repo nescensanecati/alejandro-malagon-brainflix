@@ -1,9 +1,13 @@
 import './UploadPage.scss'
 import publishIcon from '../../Assets/Images/publish.svg'
 import uploadImg from '../../Assets/Images/Upload-video-preview.jpg'
+import { Link } from 'react-router-dom'
 
 
 function UploadPage() {
+    function handleSubmitClick () {
+        alert ('Video was uploaded')
+    }
     return (
         <>
             <section className='upload'>
@@ -32,7 +36,7 @@ function UploadPage() {
                 </article>
                 </div>
                 <div className='upload__bottom'>
-                <button className='upload__send' type='upload'><img src={publishIcon} alt='' className='upload__publish-img'></img>PUBLISH</button>
+                <Link className='upload__link'  to={`/`}><button className='upload__send' type='upload' onClick={handleSubmitClick}><img src={publishIcon} alt='' className='upload__publish-img'></img>PUBLISH</button></Link>
                 <button className='upload__cancel' type='cancel'>CANCEL</button>
                 </div>
             </section>
