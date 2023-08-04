@@ -1,6 +1,6 @@
 import './UploadPage.scss'
-import publishIcon from '../Assets/Images/publish.svg'
-import uploadImg from '../Assets/Images/Upload-video-preview.jpg'
+import publishIcon from '../../Assets/Images/publish.svg'
+import uploadImg from '../../Assets/Images/Upload-video-preview.jpg'
 
 
 function UploadPage() {
