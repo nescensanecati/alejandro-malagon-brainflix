@@ -51,6 +51,11 @@
     font-size: small;
     color: $secondaryColorDarkMercury;
   }
+  &__link {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+  }
   &__send {
     align-items: center;
     background-color: $primaryColorBlue;
@@ -63,6 +68,7 @@
     font-weight: bold;
     margin: 2rem 0 0.5rem 0;
     padding: 0.5rem 1rem;
+    width: 100%;
   }
   &__publish-img {
     margin-right: 30%;
