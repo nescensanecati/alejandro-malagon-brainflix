@@ -10,7 +10,7 @@ function VideoDetails({ selectedVideoId , filteredVideos}) {
 
 	useEffect(() => {
 		if (selectedVideoId === null) return
-		const url = `https://project-2-api.herokuapp.com/videos/${selectedVideoId}?api_key=054cc34c-ac41-4ee1-8a1a-40f9b03cd86b`
+		const url = `http://localhost:8000/videos/${selectedVideoId}`
 
 		axios.get(url)
 			.then(response => {
