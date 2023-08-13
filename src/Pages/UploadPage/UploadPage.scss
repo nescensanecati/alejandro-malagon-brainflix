@@ -51,11 +51,6 @@
     font-size: small;
     color: $secondaryColorDarkMercury;
   }
-  &__link {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-  }
   &__send {
     align-items: center;
     background-color: $primaryColorBlue;
@@ -117,6 +112,7 @@
     &__send {
       margin: 2rem 0;
       padding: .5rem 4rem 0.5rem .5rem;
+      width: 30%;
     }
     &__send{
         display: flex;
@@ -172,6 +168,9 @@
     }
     &__title, &__description {
       width: 96%;
+    }
+    &__send, &__cancel {
+      width: 15%;
     }
   }
 }

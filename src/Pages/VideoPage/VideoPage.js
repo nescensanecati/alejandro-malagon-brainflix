@@ -20,7 +20,7 @@ function VideoPage() {
 		return video.id !== videoIdToDisplay;
 	})
 
-	const url = 'https://project-2-api.herokuapp.com/videos?api_key=054cc34c-ac41-4ee1-8a1a-40f9b03cd86b'
+	const url = 'http://localhost:8000/videos'
 
 	useEffect(() => {
 		axios.get(url)
