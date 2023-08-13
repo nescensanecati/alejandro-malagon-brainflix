@@ -8,7 +8,7 @@ function VideoCard({ selectedVideo, filteredVideos}) {
                     return (
                         <div key={video.id}>
                                 <div className='videos__card'>
-                                <Link className='videos__link-img' to={`/video/${video.id}`}><img alt='' src={video.image} className='videos__image'></img></Link>
+                                <Link className='videos__link-img' to={`/video/${video.id}`}><img alt={video.description} src={video.image} className='videos__image'></img></Link>
                                     <article className='videos__description'>
                                     <Link className='videos__link'  to={`/video/${video.id}`}><h3 className='videos__title'>{video.title}</h3></Link>
                                     <Link className='videos__link'  to={`/video/${video.id}`}><p className='videos__author'>{video.channel}</p></Link>

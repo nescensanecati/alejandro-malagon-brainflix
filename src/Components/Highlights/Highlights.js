@@ -5,7 +5,7 @@ function Highlights({selectedVideoDetails}) {
     return (
         <>
             <section className='highlights'>
-                <h2 className='highlights__title'>{selectedVideoDetails.title}</h2>
+                <h1 className='highlights__title'>{selectedVideoDetails.title}</h1>
                 <article className='highlights__bottom-field'>
                     <div className='highlights__bottom-left'>
                         <h3 className='highlights__author'>By {selectedVideoDetails.channel}</h3>

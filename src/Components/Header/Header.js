@@ -10,7 +10,7 @@ function Header() {
     const isMobile = useMediaQuery({ query: '(max-width: 767px' })
     const isTablet = useMediaQuery({ query: '(min-width: 768px' })
     return (
-        <>
+        <nav>
             <header className="header">
                 <section className='header__left'><NavLink to="/"><img
                         className="header__logo"
@@ -22,11 +22,11 @@ function Header() {
                         <input className='header__input' type="text" placeholder="Search.." name="search" />
                         {isMobile && <div className="header__avatar"></div>}
                     </form>
-                    <NavLink className="header__navlink" to="/upload"><button className='header__button' type="upload"><img src={uploadIcon} alt="" className="header__button-img"></img>UPLOAD</button></NavLink>
+                    <NavLink className="header__navlink" to="/upload"><button className='header__button' type="upload"><img src={uploadIcon} alt="Upload icon inside the upload button" className="header__button-img"></img>UPLOAD</button></NavLink>
                     {isTablet && <div className="header__avatar"></div>}
                 </section>
             </header>
-        </>
+        </nav>
     )
 }
 

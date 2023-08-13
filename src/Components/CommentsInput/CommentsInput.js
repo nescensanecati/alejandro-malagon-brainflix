@@ -21,7 +21,7 @@ function CommentsInput() {
                                     rows="1"
                                     required
                                 ></textarea>
-                                <button className='comments__button' type="submit"><img className='comments__button-img' src={addComment} alt=''></img>COMMENT</button>
+                                <button className='comments__button' type="submit"><img className='comments__button-img' src={addComment} alt='Comments logo inside the add new comment button'></img>COMMENT</button>
                             </div>
                         </article>
                     </div>

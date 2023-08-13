@@ -51,7 +51,7 @@ function UploadPage() {
                     <div className='upload__content'>
                         <article className='upload__section'>
                             <h2 className='upload__h2'>VIDEO THUMBNAIL</h2>
-                            <img className='upload__img' src='http://localhost:8000/images/140555ee-1481-4501-b0d1-f0775637a8dd' alt=''></img>
+                            <img className='upload__img' src='http://localhost:8000/images/140555ee-1481-4501-b0d1-f0775637a8dd' alt='Person view of riding bike on a street '></img>
                         </article>
                         <article className='upload__section'>
                             <h2 className='upload__h2'>TITLE YOUR VIDEO</h2>
@@ -76,7 +76,7 @@ function UploadPage() {
                         </article>
                     </div>
                     <div className='upload__bottom'>
-                        <button className='upload__send' type='submit'><img src={publishIcon} alt='' className='upload__publish-img'></img>PUBLISH</button>
+                        <button className='upload__send' type='submit'><img src={publishIcon} alt='Publish icon for the upload button' className='upload__publish-img'></img>PUBLISH</button>
                         <button className='upload__cancel' onClick={handleCancelClick}>CANCEL</button>
                     </div>
                 </form>
