@@ -24,7 +24,7 @@ function UploadPage() {
             "title" : uploadTitle,
             "description" : uploadDescription
         }
-        axios.post ('http://localhost:8000/videos', jsonSendToApi)
+        axios.post ('http://database-backend-brainstation-70fdd396b787.herokuapp.com/videos', jsonSendToApi)
         .then(
             response => {
                 console.log('Video was uploaded with HTTP code: ' + response.status + ', and message:' + response.statusText);
@@ -51,7 +51,7 @@ function UploadPage() {
                     <div className='upload__content'>
                         <article className='upload__section'>
                             <h2 className='upload__h2'>VIDEO THUMBNAIL</h2>
-                            <img className='upload__img' src='http://localhost:8000/images/140555ee-1481-4501-b0d1-f0775637a8dd' alt='Person view of riding bike on a street '></img>
+                            <img className='upload__img' src='http://database-backend-brainstation-70fdd396b787.herokuapp.com/images/140555ee-1481-4501-b0d1-f0775637a8dd' alt='Person view of riding bike on a street '></img>
                         </article>
                         <article className='upload__section'>
                             <h2 className='upload__h2'>TITLE YOUR VIDEO</h2>
