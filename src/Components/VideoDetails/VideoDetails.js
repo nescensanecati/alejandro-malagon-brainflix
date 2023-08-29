@@ -10,7 +10,7 @@ function VideoDetails({ selectedVideoId , filteredVideos}) {
 
 	useEffect(() => {
 		if (selectedVideoId === null) return
-		const url = `http://database-backend-brainstation-70fdd396b787.herokuapp.com/videos/${selectedVideoId}`
+		const url = `https://database-backend-brainstation-70fdd396b787.herokuapp.com/videos/${selectedVideoId}`
 
 		axios.get(url)
 			.then(response => {

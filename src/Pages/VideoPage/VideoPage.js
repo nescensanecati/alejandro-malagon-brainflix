@@ -20,7 +20,7 @@ function VideoPage() {
 		return video.id !== videoIdToDisplay;
 	})
 
-	const url = 'http://database-backend-brainstation-70fdd396b787.herokuapp.com/videos'
+	const url = 'https://database-backend-brainstation-70fdd396b787.herokuapp.com/videos'
 
 	useEffect(() => {
 		axios.get(url)
