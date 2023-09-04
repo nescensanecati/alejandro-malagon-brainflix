@@ -17,4 +17,4 @@ The API was adapted to be run in production, and it is now running in Heroku, un
 https://database-backend-brainstation-70fdd396b787.herokuapp.com/
 
 If you want to see this project deployed and in action, please go to: 
-https://main--wonderful-crepe-91b4e8.netlify.app/
+https://brainflix.alex-diaz.info/
